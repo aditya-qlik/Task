@@ -23,8 +23,12 @@ function division(valueOfNum1 = 0, valueOfNum2 = 1) {
                 return valueOfNum1 / valueOfNum2;
         }
 }
-function modulus(valueOfNum1 = 0, valueOfNum2 = 1) {
-        return valueOfNum1 % valueOfNum2;
+function modulus(valueOfNum2, valueOfNum1 = 0) {
+        if (num2 === 0 || isNaN(num2)) {
+                console.error(`2nd Number can't be 0`);
+        } else {
+                return valueOfNum1 % valueOfNum2;
+        }
 }
 function displayResult(toBeDisplayed) {
         document.querySelector('#displayResult').innerHTML = toBeDisplayed;
@@ -72,7 +76,7 @@ function calculate() {
                         printOut = `The quotient of ${num1} and ${num2} is ${division(num1, num2)}`;
                         break;
                 case '%':
-                        printOut = ` The modulus of ${num1} and ${num2} is ${modulus(num1, num2)}`;
+                        printOut = ` The modulus of ${num1} and ${num2} is ${modulus(num2, num1)}`;
                         break;
                 default:
                         printOut = `Invalid operator`;
@@ -88,6 +92,3 @@ function clear() {
         document.querySelector('#displayResult').innerHTML = '';
 }
 document.querySelector('#clean').addEventListener('click', clear);
-
-
-
