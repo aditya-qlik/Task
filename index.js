@@ -5,17 +5,17 @@ const number2 = document.getElementById('num2');
 const operation = document.querySelector('#operator');
 const submit = document.querySelector('[name="submit"]');
 
-function add(num1 = 0, num2 = 0) {
-        return num1 + num2;
+function add(valueOfNum1 = 0, valueOfNum2 = 0) {
+        return valueOfNum1 + valueOfNum2;
 }
-function subtraction(num1 = 0, num2 = 0) {
-        return num1 - num2;
+function subtraction(valueOfNum1 = 0, valueOfNum2 = 0) {
+        return valueOfNum1 - valueOfNum2;
 }
-function multiplication(num1 = 0, num2 = 1) {
-        return num1 * num2;
+function multiplication(valueOfNum1 = 0, valueOfNum2 = 1) {
+        return valueOfNum1 * valueOfNum2;
 }
-function division(num1 = 0, num2 = 1) {
-        return num1 / num2;
+function division(valueOfNum1 = 0, valueOfNum2 = 1) {
+        return valueOfNum1 / valueOfNum2;
 }
 let num1;
 let num2;
